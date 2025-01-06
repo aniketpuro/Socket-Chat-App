@@ -18,7 +18,6 @@ Welcome to **Socket Chat App**, a real-time, lightweight, and intuitive chat app
 
 - **Backend**: Node.js with Socket.IO
 - **Frontend**: HTML, CSS, and JavaScript
-- **Database**: (Optional) MongoDB for message persistence
 - **WebSocket Protocol**: For real-time communication
 
 ---
@@ -29,7 +28,7 @@ Ensure you have the following installed:
 
 - [Node.js](https://nodejs.org/) (v14 or higher)
 - [npm](https://www.npmjs.com/) (or Yarn)
-- (Optional) [MongoDB](https://www.mongodb.com/) for persistent storage
+
 
 ---
 
@@ -55,20 +54,6 @@ By default, the app will run on `http://localhost:3000`.
 
 ---
 
-## 🔧 Configuration
-
-- Open `config.js` (or `.env` file) to update the following:
-  - Server Port
-  - Database URL (if using MongoDB)
-
-Example:
-```env
-PORT=3000
-DB_URL=mongodb://localhost:27017/socket-chat
-```
-
----
-
 ## 💻 Usage
 
 1. Open your browser and navigate to `http://localhost:3000`.
@@ -82,11 +67,13 @@ DB_URL=mongodb://localhost:27017/socket-chat
 ```
 📦socket-chat-app
  ┣ 📂public
- ┃ ┣ 📜index.html        # Frontend HTML
- ┃ ┣ 📜style.css         # Frontend CSS
- ┃ ┗ 📜app.js            # Frontend JavaScript
- ┣ 📂server
- ┃ ┗ 📜server.js         # Backend Server Code
+ ┃ ┣📂screeshort
+ ┃  ┗ imge 2.png
+ ┃    join.png
+ ┃    mobile_view.png
+ ┃    multipel_user.png
+ ┣ index.HTML
+ ┃ index.js
  ┣ 📜package.json        # Node.js Dependencies
  ┗ 📜README.md           # Project Documentation
 ```
@@ -96,10 +83,10 @@ DB_URL=mongodb://localhost:27017/socket-chat
 ## 🖼️ Screenshots
 
 ### Login/Join Screen
-![Login Screen](https://imgur.com/a/gWmE5W8)
+![Login Screen](./)
 
 ### Chat Room
-![Chat Room](./screenshots/chat-room.png)
+![Chat Room](./public/screenshot/image 2.png)
 
 ### Typing Indicator
 ![Typing Indicator](./screenshots/typing-indicator.png)

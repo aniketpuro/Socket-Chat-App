@@ -82,20 +82,17 @@ By default, the app will run on `http://localhost:3000`.
 
 ## 🖼️ Screenshots
 
-### Login/Join Screen
-![Login Screen](./)
+### Login Page
+![Login Page](public/screenshort/image.png)
 
-### Chat Room
-![Chat Room](public/screenshot/image.png)
-
-### Typing Indicator
-![Typing Indicator](public/screenshot/image.png)
-
-### Multiple Chat Rooms
-![Multiple Chat Rooms](public/screenshot/image.png)
+### Join Chat
+![Join Chat](public/screenshort/join.png)
 
 ### Mobile View
-![Mobile View](public/screenshot/image.png)
+![Mobile View](public/screenshort/mobile_view.png)
+
+### Multiple Users Chatting
+![Multiple Users](public/screenshort/multipel_user.png)
 
 ---
 

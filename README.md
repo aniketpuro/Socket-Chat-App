@@ -86,16 +86,16 @@ By default, the app will run on `http://localhost:3000`.
 ![Login Screen](./)
 
 ### Chat Room
-![Chat Room](./public/screenshot/image.png)
+![Chat Room](public/screenshot/image.png)
 
 ### Typing Indicator
-![Typing Indicator](./screenshots/typing-indicator.png)
+![Typing Indicator](public/screenshot/image.png)
 
 ### Multiple Chat Rooms
-![Multiple Chat Rooms](https://imgur.com/a/8NYHwMd)
+![Multiple Chat Rooms](public/screenshot/image.png)
 
 ### Mobile View
-![Mobile View](https://imgur.com/a/gWmE5W8)
+![Mobile View](public/screenshot/image.png)
 
 ---
 

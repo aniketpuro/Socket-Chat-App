@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chat App by Aniket Purohit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <h1 class="font-bold text-green-500 text-3xl text-center mt-5">
+        Chat App by Aniket Purohit
+    </h1>
+    <div>
+        <h2 class="font-semibold text-xl text-center mt-5" id="logo">
+            Real-time Chat App using Socket.io
+        </h2>
+    </div>
+    <form class="flex flex-col justify-center items-center mt-5" id="form">
+        <input class="border border-gray-400 rounded-md mt-5 p-1 w-1/2" 
+               type="text" 
+               placeholder="Enter your name" 
+               id="myname">
+        <input class="border border-gray-400 rounded-md mt-5 p-1 w-1/2" 
+               type="text" 
+               placeholder="Type your message" 
+               id="message">
+        <button class="bg-blue-500 rounded-md p-2 text-white mt-5 w-1/3">
+            Send Message
+        </button>
+    </form>
+    <div class="flex flex-col justify-center items-center mt-5 w-1/2 mx-auto" id="messageArea">
+    </div>
+    <footer class="text-center mt-10 text-gray-500">
+        <p>Created with ❤️ by <span class="font-bold">Aniket Purohit</span></p>
+    </footer>
+</body>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    let socket = io();
+
+    let form = document.getElementById('form');
+    let myname = document.getElementById('myname');
+    let message = document.getElementById('message');
+    let messageArea = document.getElementById("messageArea");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        if (message.value.trim() && myname.value.trim()) {
+            socket.emit('send name', myname.value);
+            socket.emit('send message', message.value);
+            message.value = "";
+        }
+    });
+
+    socket.on("send name", (username) => {
+        let name = document.createElement("p");
+        name.style.backgroundColor = "#4caf50";
+        name.style.color = "white";
+        name.style.textAlign = "center";
+        name.style.padding = "5px";
+        name.style.borderRadius = "5px";
+        name.textContent = username + ":";
+        messageArea.appendChild(name);
+    });
+
+    socket.on("send message", (chat) => {
+        let chatContent = document.createElement("p");
+        chatContent.style.backgroundColor = "#f1f1f1";
+        chatContent.style.padding = "5px";
+        chatContent.style.borderRadius = "5px";
+        chatContent.style.marginTop = "5px";
+        chatContent.style.textAlign = "left";
+        chatContent.style.width = "100%";
+        chatContent.textContent = chat;
+        messageArea.appendChild(chatContent);
+    });
+</script>
+
+</html>
